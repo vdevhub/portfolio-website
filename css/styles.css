@@ -405,11 +405,6 @@ Responsive design rules
     margin-bottom: 20px;
   }
 
-  th,
-  td {
-    padding: 5px;
-  }
-
   .city-animation {
     width: 100%;
   }
