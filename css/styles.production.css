@@ -530,7 +530,7 @@ Responsive design rules
   }
 
   .navigation-list li {
-    display: inline;
+    display: block;
   }
 }
 
