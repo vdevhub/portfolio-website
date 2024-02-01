@@ -449,6 +449,12 @@ Responsive design rules
   .navigation-list li {
     display: block;
   }
+
+  th,
+  td {
+    padding: 10px;
+    font-size: 16px;
+  }
 }
 
 @media all and (min-width: 700px) and (max-width: 1200px) {
