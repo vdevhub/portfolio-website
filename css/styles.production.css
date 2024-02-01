@@ -411,11 +411,8 @@ Project list styling, grid and fallback.
     padding: 20px;
     border-radius: 10px;
     text-align: left;
-    -webkit-transition: -webkit-transform 0.2s ease;
-    transition: -webkit-transform 0.2s ease;
-    -o-transition: transform 0.2s ease;
     transition: transform 0.2s ease;
-    transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+    -webkit-transition: -webkit-transform 0.2s ease;
   }
 
   .project-list__item:last-child {
@@ -585,7 +582,7 @@ Animations
   .sun {
     animation: 4s color-change infinite alternate linear;
   }
-*/
+  */
 
 @-webkit-keyframes cloud-move {
   from {
@@ -634,7 +631,7 @@ Animations
   .cloud-front {
     animation: 30s cloud-move infinite alternate linear;
   }
-*/
+  */
 
 @-webkit-keyframes cloud-move-reverse {
   from {
