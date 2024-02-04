@@ -33,10 +33,9 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.6;
-
-  /* background: rgb(61,2,100); */
-
-  /* background: linear-gradient(140deg, rgba(61,2,100,1) 48%, rgba(255,0,156,1) 97%); */
+  background: rgb(61, 2, 100);
+  background: -o-linear-gradient(310deg, rgba(61, 2, 100, 1) 48%, rgba(255, 0, 156, 1) 97%);
+  background: linear-gradient(140deg, rgba(61, 2, 100, 1) 48%, rgba(255, 0, 156, 1) 97%);
 }
 
 main {
@@ -59,6 +58,10 @@ h3 {
   font-family: 'Abril Fatface', serif;
   font-weight: 400;
   font-size: 20px;
+}
+
+.heading--light {
+  color: #e6e6fa;
 }
 
 /*
@@ -186,6 +189,7 @@ Page header styling, flexbox.
   padding: 20px 60px;
   margin-bottom: 60px;
   background-color: #e6e6fa;
+  opacity: 0.5;
 
   /* border-bottom: 4px solid var(--primary-color); */
   position: fixed;
@@ -223,8 +227,12 @@ Navigation list styling.
   margin-left: 15px;
 }
 
-.navigation-list__item--active {
+.navigation-list a {
   text-decoration: none;
+  font-size: 20px;
+}
+
+.navigation-list__item--active {
   font-weight: 700;
 }
 
@@ -245,8 +253,7 @@ Footer styling.
 
 .find-me-text {
   font-style: italic;
-
-  /* color: var(--text-light); */
+  color: white;
 }
 
 .back-to-top {
@@ -347,6 +354,12 @@ td {
 About page styling, flexbox
 */
 .about {
+  width: 60%;
+  margin: auto;
+  text-align: center;
+}
+
+.about-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -354,12 +367,14 @@ About page styling, flexbox
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 60%;
   margin: auto;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   text-align: center;
+  background-color: white;
+  border-radius: 50px;
+  padding: 50px;
 }
 
 .about__item {

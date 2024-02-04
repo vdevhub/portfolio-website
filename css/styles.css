@@ -55,10 +55,8 @@ body {
   font-weight: var(--font-weight-normal);
   font-size: var(--font-size-std);
   line-height: var(--line-height-std);
-
-  /* background: rgb(61,2,100); */
-
-  /* background: linear-gradient(140deg, rgba(61,2,100,1) 48%, rgba(255,0,156,1) 97%); */
+  background: rgb(61, 2, 100);
+  background: linear-gradient(140deg, rgba(61, 2, 100, 1) 48%, rgba(255, 0, 156, 1) 97%);
 }
 
 main {
@@ -81,6 +79,10 @@ h3 {
   font-family: var(--font-family-heading);
   font-weight: var(--font-weight-normal);
   font-size: var(--font-size-h3);
+}
+
+.heading--light {
+  color: var(--boxes-color);
 }
 
 /*
@@ -151,6 +153,7 @@ Page header styling, flexbox.
   padding: 20px 60px;
   margin-bottom: 60px;
   background-color: var(--boxes-color);
+  opacity: 0.5;
 
   /* border-bottom: 4px solid var(--primary-color); */
   position: fixed;
@@ -182,8 +185,12 @@ Navigation list styling.
   margin-left: 15px;
 }
 
-.navigation-list__item--active {
+.navigation-list a {
   text-decoration: none;
+  font-size: var(--font-size-h3);
+}
+
+.navigation-list__item--active {
   font-weight: var(--font-weight-bold);
 }
 
@@ -199,8 +206,7 @@ Footer styling.
 
 .find-me-text {
   font-style: italic;
-
-  /* color: var(--text-light); */
+  color: var(--text-light);
 }
 
 .back-to-top {
@@ -289,12 +295,20 @@ td {
 About page styling, flexbox
 */
 .about {
+  width: var(--middle-page-box-std-width);
+  margin: auto;
+  text-align: center;
+}
+
+.about-section {
   display: flex;
   flex-direction: column;
-  width: var(--middle-page-box-std-width);
   margin: auto;
   align-items: center;
   text-align: center;
+  background-color: var(--text-light);
+  border-radius: var(--border-radius-std);
+  padding: 50px;
 }
 
 .about__item {
