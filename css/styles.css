@@ -382,6 +382,20 @@ Project list styling, grid and fallback.
   text-align: center;
 }
 
+.project {
+  display: block;
+  text-align: left;
+}
+
+.project-img>img {
+  max-width: 750px;
+  border-radius: 10px;
+}
+
+.project-img {
+  text-align: center;
+}
+
 /*
 Responsive design rules
 */
