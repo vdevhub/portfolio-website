@@ -55,6 +55,7 @@ body {
   font-weight: var(--font-weight-normal);
   font-size: var(--font-size-std);
   line-height: var(--line-height-std);
+  min-height: 100vh;
   background: rgb(61, 2, 100);
   background: linear-gradient(140deg, rgba(61, 2, 100, 1) 48%, rgba(255, 0, 156, 1) 97%);
 }
@@ -351,6 +352,9 @@ Project list styling, grid and fallback.
   }
 
   .project-list__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: var(--boxes-color);
     width: auto;
     min-height: auto;
@@ -370,6 +374,12 @@ Project list styling, grid and fallback.
 .project-list__item:hover {
   cursor: var(--cursor-hover-type);
   transform: scale(1.05, 1.05);
+}
+
+.project-detail__btn {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
 }
 
 /*
