@@ -383,7 +383,7 @@ Project list styling, grid and fallback.
 }
 
 .project-img>img {
-  max-width: 750px;
+  width: 80%;
   border-radius: 10px;
 }
 
@@ -399,7 +399,7 @@ Project list styling, grid and fallback.
 }
 
 .portrait-img>img {
-  max-width: 500px;
+  width: 45%;
 }
 
 /*
@@ -484,6 +484,10 @@ Responsive design rules
   td {
     padding: 10px;
     font-size: 16px;
+  }
+
+  .project-img>img {
+    width: 100%;
   }
 }
 
