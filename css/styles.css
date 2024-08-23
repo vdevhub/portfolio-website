@@ -392,6 +392,16 @@ Project list styling, grid and fallback.
   margin: 30px auto;
 }
 
+.portrait-img {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.portrait-img>img {
+  max-width: 500px;
+}
+
 /*
 Responsive design rules
 */
