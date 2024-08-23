@@ -33,6 +33,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.6;
+  min-height: 100vh;
   background: rgb(61, 2, 100);
   background: -o-linear-gradient(310deg, rgba(61, 2, 100, 1) 48%, rgba(255, 0, 156, 1) 97%);
   background: linear-gradient(140deg, rgba(61, 2, 100, 1) 48%, rgba(255, 0, 156, 1) 97%);
@@ -419,6 +420,16 @@ Project list styling, grid and fallback.
   }
 
   .project-list__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     background-color: #e6e6fa;
     width: auto;
     min-height: auto;
@@ -427,16 +438,10 @@ Project list styling, grid and fallback.
     border-radius: 10px;
     text-align: left;
     -webkit-transition: -webkit-transform 0.2s ease;
+    transition: -webkit-transform 0.2s ease;
     -o-transition: transform 0.2s ease;
     transition: transform 0.2s ease;
-  }
-
-  .project-list__item:last-child {
-    -ms-grid-column: 3;
-    grid-column: 3 / 3;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 3;
-    grid-row: 1 / 4;
+    transition: transform 0.2s ease, -webkit-transform 0.2s ease;
   }
 }
 
@@ -445,6 +450,41 @@ Project list styling, grid and fallback.
   -webkit-transform: scale(1.05, 1.05);
   -ms-transform: scale(1.05, 1.05);
   transform: scale(1.05, 1.05);
+}
+
+.project-detail__btn {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.project {
+  display: block;
+  text-align: left;
+}
+
+.project-img>img {
+  width: 80%;
+  border-radius: 10px;
+}
+
+.project-img {
+  text-align: center;
+  margin: 30px auto;
+}
+
+.portrait-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.portrait-img>img {
+  width: 45%;
 }
 
 /*
@@ -457,11 +497,6 @@ Responsive design rules
 
   .project-list {
     grid-gap: 10px;
-  }
-
-  .project-list__item:last-child {
-    grid-column: auto / auto;
-    grid-row: auto / auto;
   }
 
   h1 {
@@ -506,7 +541,7 @@ Responsive design rules
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    width: 100%;
+    gap: 20px;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -518,10 +553,6 @@ Responsive design rules
 
   #contact-form {
     margin-bottom: 50px;
-  }
-
-  .my-contacts {
-    text-align: center;
   }
 }
 
@@ -539,11 +570,6 @@ Responsive design rules
     min-width: 90%;
   }
 
-  .my-contacts {
-    text-align: center;
-    font-size: 15px;
-  }
-
   .navigation-list li {
     display: block;
   }
@@ -552,6 +578,10 @@ Responsive design rules
   td {
     padding: 10px;
     font-size: 16px;
+  }
+
+  .project-img>img {
+    width: 100%;
   }
 }
 
