@@ -364,11 +364,6 @@ Project list styling, grid and fallback.
     text-align: left;
     transition: transform 0.2s ease;
   }
-
-  .project-list__item:last-child {
-    grid-column: 3 / 3;
-    grid-row: 1 / 4;
-  }
 }
 
 .project-list__item:hover {
@@ -407,11 +402,6 @@ Responsive design rules
 
   .project-list {
     grid-gap: 10px;
-  }
-
-  .project-list__item:last-child {
-    grid-column: auto / auto;
-    grid-row: auto / auto;
   }
 
   h1 {
