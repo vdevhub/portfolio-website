@@ -449,7 +449,7 @@ Responsive design rules
 
   .contact-section {
     flex-direction: column;
-    width: 100%;
+    gap: 20px;
     align-items: center;
   }
 
@@ -459,10 +459,6 @@ Responsive design rules
 
   #contact-form {
     margin-bottom: 50px;
-  }
-
-  .my-contacts {
-    text-align: center;
   }
 }
 
@@ -477,11 +473,6 @@ Responsive design rules
 
   .contact {
     min-width: 90%;
-  }
-
-  .my-contacts {
-    text-align: center;
-    font-size: 15px;
   }
 
   .navigation-list li {
