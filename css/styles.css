@@ -394,6 +394,7 @@ Project list styling, grid and fallback.
 
 .project-img {
   text-align: center;
+  margin: 30px auto;
 }
 
 /*
