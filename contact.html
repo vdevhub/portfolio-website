@@ -47,15 +47,15 @@
         <div class="contact">
             <h1 class="heading--light">Contact</h1>
             <div class="contact-section box-shadow">
-                <form class="contact__item" action="submit-contact-form" method="post" id="contact-form">
+                <form class="contact__item" action="https://formspree.io/f/xpwaoprn" method="POST" id="contact-form">
                     <label class="standard-label required" for="contact-name">Name: </label>
-                    <input type="text" id="contact-name" required>
+                    <input type="text" name="name" id="contact-name" required>
                     <label class="standard-label required" for="contact-email">E-mail: </label>
-                    <input type="email" id="contact-email" required>
+                    <input type="email" name="email" id="contact-email" required>
                     <label class="standard-label" for="contact-telephone">Telephone: </label>
-                    <input type="tel" id="contact-telephone">
+                    <input type="tel" name="telephone" id="contact-telephone">
                     <label class="standard-label required" for="message">Message: </label>
-                    <textarea maxlength="240" id="message" required></textarea>
+                    <textarea name="message" maxlength="240" id="message" required></textarea>
                     <button type="submit">Send Message</button>
                 </form>
                 <div class="contact__item my-contacts">
