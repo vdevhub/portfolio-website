@@ -237,6 +237,30 @@ Navigation list styling.
   font-weight: 700;
 }
 
+/* Hamburger Menu Styling */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  padding: 0;
+}
+
+.hamburger__line {
+  width: 100%;
+  height: 3px;
+  background-color: #1f1313;
+}
+
 /*
 Footer styling.
 */
@@ -577,8 +601,51 @@ Responsive design rules
     min-width: 90%;
   }
 
+  /* Adjust header padding for mobile */
+  .page-header {
+    padding: 20px 30px;
+  }
+
+  /* Hide the navigation list by default */
+  .navigation-list {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #e6e6fa;
+    padding: 10px 0;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Show hamburger menu on mobile */
+  .hamburger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  /* Display the navigation list when active */
+  .navigation-list.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
   .navigation-list li {
     display: block;
+    text-align: right;
+    margin: 10px 0;
+    padding-right: 30px;
   }
 
   th,

@@ -195,6 +195,25 @@ Navigation list styling.
   font-weight: var(--font-weight-bold);
 }
 
+/* Hamburger Menu Styling */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  padding: 0;
+}
+
+.hamburger__line {
+  width: 100%;
+  height: 3px;
+  background-color: var(--text-color);
+}
+
 /*
 Footer styling.
 */
@@ -482,8 +501,41 @@ Responsive design rules
     min-width: 90%;
   }
 
+  /* Adjust header padding for mobile */
+  .page-header {
+    padding: 20px 30px;
+  }
+
+  /* Hide the navigation list by default */
+  .navigation-list {
+    display: none;
+    flex-direction: column;
+    background-color: var(--boxes-color);
+    padding: 10px 0;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Show hamburger menu on mobile */
+  .hamburger {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  /* Display the navigation list when active */
+  .navigation-list.active {
+    display: flex;
+  }
+
   .navigation-list li {
     display: block;
+    text-align: right;
+    margin: 10px 0;
+    padding-right: 30px;
   }
 
   th,
