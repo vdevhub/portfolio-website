@@ -531,10 +531,6 @@ Responsive design rules
     display: flex;
   }
 
-  .page-header {
-    opacity: 0.8;
-  }
-
   .navigation-list li {
     display: block;
     text-align: right;
