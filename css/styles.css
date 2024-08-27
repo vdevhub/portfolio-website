@@ -538,6 +538,10 @@ Responsive design rules
     padding-right: 30px;
   }
 
+  .page-header {
+    opacity: 0.8;
+  }
+
   th,
   td {
     padding: 10px;
