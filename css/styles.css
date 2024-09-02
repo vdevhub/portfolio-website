@@ -471,6 +471,17 @@ Case study styling.
   flex: 1;
 }
 
+.project-cs-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin: 50px 0;
+}
+
+.project-cs-links>a {
+  text-align: center;
+}
+
 /*
 Responsive design rules
 */
