@@ -424,6 +424,54 @@ Project list styling, grid and fallback.
 }
 
 /*
+Case study styling.
+*/
+.cs-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.cs-section__item {
+  max-width: 48%;
+}
+
+.cs-section__item>img {
+  width: 90%;
+  margin: 15px;
+  margin-top: 60px;
+  border-radius: 10px;
+}
+
+.tools-list {
+  list-style-type: none;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  max-height: 170px;
+}
+
+.cs-info-border {
+  padding: 20px;
+
+  border-radius: 10px;
+  background-color: #faeaf2;
+}
+
+.info-cards {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.info-cards__item {
+  flex: 1;
+}
+
+/*
 Responsive design rules
 */
 @media all and (max-width: 1200px) {
