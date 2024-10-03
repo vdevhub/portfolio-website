@@ -339,6 +339,10 @@ About page styling, flexbox
   max-width: 850px;
 }
 
+.skills-list__item {
+  min-width: 90%
+}
+
 .credit {
   font-size: 12px;
   font-style: italic;
