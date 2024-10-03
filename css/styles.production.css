@@ -326,7 +326,7 @@ Profile section styling, flexbox.
 }
 
 .profile__portrait {
-  width: 250px;
+  width: 300px;
   margin-right: 40px;
   border-radius: 50%;
 }
@@ -408,6 +408,10 @@ About page styling, flexbox
 
 .about-me-text {
   max-width: 850px;
+}
+
+.skills-list__item {
+  min-width: 90%
 }
 
 .credit {
@@ -671,6 +675,10 @@ Responsive design rules
 
   .about-section {
     padding: 25px;
+  }
+
+  .tools-list {
+    max-height: 700px
   }
 
   .project-list {
