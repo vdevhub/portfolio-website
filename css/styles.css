@@ -268,7 +268,7 @@ Profile section styling, flexbox.
 }
 
 .profile__portrait {
-  width: 250px;
+  width: 300px;
   margin-right: 40px;
   border-radius: var(--border-radius-circle);
 }
