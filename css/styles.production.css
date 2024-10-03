@@ -677,6 +677,10 @@ Responsive design rules
     padding: 25px;
   }
 
+  .tools-list {
+    max-height: 700px
+  }
+
   .project-list {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
