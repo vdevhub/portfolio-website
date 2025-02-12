@@ -1070,7 +1070,7 @@ body {
 .skill-container {
    max-width: 100%;
    display: grid;
-   place-items: center;
+   place-items: top;
    grid-template-columns: repeat(2, 1fr);
    column-gap: 50px;
    row-gap: 50px;
@@ -1080,7 +1080,7 @@ body {
    position: relative;
    background: var(--card-bg);
    display: flex;
-   justify-content: center;
+   justify-content: top;
    align-items: center;
    flex-direction: column;
    padding: 50px 25px;
