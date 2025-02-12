@@ -143,8 +143,8 @@ function closeModal(modalId) {
          portfolioModal.classList.remove("active");
       }, 100);
 
-      // Remove hash from URL
-      history.pushState("", document.title, window.location.pathname);
+      // Use pushState to update the URL without fragments
+      history.pushState({ modalId: modalId }, document.title, `${window.location.pathname}?modal=${modalId}`);
    }
 }
 
@@ -164,9 +164,11 @@ portfolioCardsWithModals.forEach((portfolioCardWithModal) => {
 
 // Check for a hash in the URL and open the corresponding modal on page load
 window.addEventListener("load", () => {  // Using 'load' instead of 'DOMContentLoaded' to ensure everything is ready
-   if (window.location.hash) {
-      const modalId = window.location.hash.substring(1);  // Extract the modal ID from the hash
-      openModal(modalId);  // Open the modal based on the hash
+   const urlParams = new URLSearchParams(window.location.search);
+   const modalId = urlParams.get("modal");
+
+   if (modalId) {
+      openModal(modalId);
    }
 });
 
