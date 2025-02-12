@@ -123,8 +123,8 @@ function openModal(modalId) {
          portfolioModal.classList.add("active");
       }, 300);
 
-      // Update URL with the modal ID
-      history.pushState(null, null, `#${modalId}`);
+      // Use pushState to update the URL without fragments
+      history.pushState({ modalId: modalId }, document.title, `${window.location.pathname}?modal=${modalId}`);
    }
 }
 
@@ -143,8 +143,7 @@ function closeModal(modalId) {
          portfolioModal.classList.remove("active");
       }, 100);
 
-      // Use pushState to update the URL without fragments
-      history.pushState({ modalId: modalId }, document.title, `${window.location.pathname}?modal=${modalId}`);
+      history.replaceState(null, null, `${window.location.pathname}#portfolio`);
    }
 }
 
