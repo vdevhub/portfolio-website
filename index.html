@@ -1,86 +1,1023 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="shortcut icon" type="image/x-icon" href="img/v-favicon.ico">
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,400;0,700;1,400&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/styles.production.css">
-    <!-- <link rel="stylesheet" type="text/css" href="css/styles.css"> -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo/favicon.ico">
+  <title>V Portfolio</title>
+
+  <!--========== Swiper CSS ==========-->
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+  <!--========== Main style sheet ==========-->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!--========== Remixicon ==========-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+
+  <!--========== ScrollReveal JS ==========-->
+  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
 </head>
 
 <body>
-    <header class="page-header box-shadow">
-        <a class="page-header__item" href="index.html">
-            <img class="page-header__item-logo" src="img/v-logo.svg"
-                alt="Personal logo of NAME, it depicts and owl's head with capital letter V in the middle">
-        </a>
-        <nav class="page-header__item">
-            <button class="hamburger" aria-label="Toggle navigation">
-                <span class="hamburger__line"></span>
-                <span class="hamburger__line"></span>
-                <span class="hamburger__line"></span>
-            </button>
-            <ul role="menubar" class="navigation-list">
-                <li role="presentation">
-                    <a href="index.html" role="menuitem"
-                        class="navigation-list__item navigation-list__item--active">Home</a>
-                </li>
-                <li role="presentation">
-                    <a aria-label="about-me" href="about.html" role="menuitem" class="navigation-list__item">About</a>
-                </li>
-                <li role="presentation">
-                    <a href="work.html" role="menuitem" class="navigation-list__item">Projects</a>
-                </li>
-                <li role="presentation">
-                    <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div class="profile box-shadow">
-            <!-- Add your Portrait image here -->
-            <!-- <img src="https://placehold.co/400" class="profile__portrait box-shadow"
-                alt="A portrait of Veronika, a woman with long brown hair, smiling"> -->
-            <div class="profile__intro">
-                <h1>Greetings! 👋</h1>
-                <p>I’m Veronika, a web developer with a background in cybersecurity and a passion for
-                    creating user-friendly, intuitive web applications. My experience blends technical expertise with a
-                    creative approach to design, focusing on clean code and engaging user experiences. I am thorough,
-                    analytical, empathetic, with well-developed communication and documentation skills, and I love
-                    working on projects that make a meaningful impact.</p>
-                </p>
-                <br>
-                <a href="work.html" class="button">My Projects</a>
+
+  <!--========== Customized cursor ==========-->
+  <div class="cursor">
+    <div class="cursor-dot"></div>
+    <div class="cursor-circle"></div>
+  </div>
+
+  <!--========== To top button with scroll indicator bar ==========-->
+  <div class="to-top-btn">
+    <a href="#home"><span>To Top</span></a>
+    <div class="scroll-indicator-bar"></div>
+  </div>
+
+  <!--========== Header ==========-->
+  <header class="sue-header">
+    <div class="sue-container">
+      <div class="inner">
+        <div class="sue-logo">
+          <a href="#"><img src="assets/images/logo/logo-blue.png" width="45px"></a>
+        </div>
+        <div class="header-btns">
+          <a href="#contact" class="sue-btn-link">
+            <div class="sue-main-btn border-btn lets-talk-btn">Let's talk</div>
+          </a>
+          <a href="#contact" class="lets-talk-icon"><i class="ri-chat-1-fill"></i></a>
+          <div class="theme-btn">
+            <i class="ri-sun-fill sun-icon"></i>
+            <i class="ri-moon-fill moon-icon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!--========== Bottom navigation menu ==========-->
+  <div class="bottom-nav-container">
+    <div class="bottom-nav">
+      <div class="bottom-nav-inner">
+        <i class="ri-arrow-left-down-line menu-hide-btn"></i>
+        <ul class="menu">
+          <li class="menu-item"><a href="#home" class="current"><i class="ri-home-4-line"></i><span>Home</span></a></li>
+          <li class="menu-item"><a href="#about"><i class="ri-user-line"></i><span>About</span></a></li>
+          <li class="menu-item"><a href="#resume"><i class="ri-quote-text"></i><span>Resume</span></a></li>
+          <!-- <li class="menu-item"><a href="#service"><i class="ri-service-line"></i><span>Service</span></a></li> -->
+          <li class="menu-item"><a href="#portfolio"><i class="ri-briefcase-line"></i><span>Portfolio</span></a></li>
+          <li class="menu-item"><a href="#contact"><i class="ri-chat-1-line"></i><span>Contact</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="menu-show-btn">
+      <div class="bar-01"></div>
+      <div class="bar-02"></div>
+    </div>
+  </div>
+
+  <!--========== Home ==========-->
+  <section class="sue-section nav-menu-section" id="home">
+    <div class="sue-container home-container">
+      <div class="sue-wrapper">
+        <div class="home-social">
+          <span>Follow On</span>
+          <div class="social-line"></div>
+          <ul class="social-icons">
+            <li><a href="https://www.linkedin.com/in/veronikatr/"><i class="ri-linkedin-fill"></i></a></li>
+            <li><a href="https://github.com/vdevhub"><i class="ri-github-fill"></i></a></li>
+            <li><a href="https://medium.com/@vdevhub"><i class="ri-medium-fill"></i></a></li>
+          </ul>
+        </div>
+        <div class="avatar-container">
+          <a href="#contact" class="sue-btn-link">
+            <div class="sue-main-btn fill-btn hire-btn-01">Portfolio <i class="ri-briefcase-line"></i></div>
+          </a>
+          <div class="avatar-img">
+            <img src="https://placehold.co/400" alt="">
+          </div>
+          <div class="avatar-info">
+            <div class="text-content">
+              <h4 class="hello-text">Hello, I'm</h4>
+              <h1 class="my-name">Veronika</h1>
+              <p class="what-i-do">A Web Developer<br>Loving Frontend<br>Trained in Full-Stack<br>Ex-Cybersecurity</p>
             </div>
+            <a href="#portfolio" class="sue-btn-link">
+              <div class="sue-main-btn fill-btn hire-btn-02">Portfolio <i class="ri-briefcase-line"></i></div>
+            </a>
+          </div>
         </div>
-    </main>
-    <footer class="page-footer">
-        <div class="find-me-text">
-            <p>Find me on</p>
+        <a href="#about" class="home-scroll-btn">
+          <i class="ri-mouse-line mouse-icon"></i>
+          <div>Scroll Down</div>
+          <i class="ri-arrow-down-s-line arrow-icon"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!--========== About Me ==========-->
+  <section class="sue-section nav-menu-section" id="about">
+    <div class="sue-container sue-sub-container">
+      <div class="sue-wrapper">
+        <div class="section-title about-title">
+          <h3>About Me</h3>
+          <p>What I do</p>
         </div>
-        <div class="social-media">
-            <a href="https://github.com/vdevhub" target="_blank"><img src="img/github_icon.svg" alt="Github"></a>
-            <a href="https://www.linkedin.com/in/veronikatr/" target="_blank"><img src="img/linkedin_icon.svg"
-                    alt="LinkedIn"></a>
-            <a href="https://medium.com/@vdevhub" target="_blank"><img src="img/medium-icon.svg" alt="Medium"></a>
+        <div class="section-content">
+          <div class="about-img">
+            <img src="https://placehold.co/400" alt="">
+          </div>
+          <div class="about-details">
+            <div class="about-info">
+              <h4 class="iam">I'm a Web Developer · Loving Frontend · Trained in Full-Stack</h4>
+              <p class="about-description">I'm a Prague, Czech Republic-based web developer with a passion for crafting
+                modern applications that elevate user experience and make a meaningful impact. After several
+                years in cybersecurity, specializing in automation and investigations, I’ve shifted my focus to
+                development, especially frontend, where I can combine my technical and analytical skillset with
+                a love for design.<br><br> My
+                experience in cybersecurity has sharpened my capabilities in problem-solving, attention to
+                detail, and
+                operational efficiency—all of which I now want to channel into creating seamless web
+                experiences.<br><br>Recently, I also completed the Full-Stack Web Development program at CareerFoundry
+                where I honed frontend, backend, and mobile development skills along with coding best practices
+                and documentation.<br><br>I’m excited about the journey ahead and open to new opportunities!</p>
+            </div>
+            <div class="pro-list">
+              <!-- <div class="pro-card">
+                <span>07</span>
+                <p>Years Of Experience</p>
+              </div>
+              <div class="pro-card">
+                <span>1.2K</span>
+                <p>Complete Projects</p>
+              </div>
+              <div class="pro-card">
+                <span>1K</span>
+                <p>Satisfied Customers</p>
+              </div> -->
+            </div>
+            <div class="about-buttons">
+              <a href="#contact" class="sue-btn-link">
+                <div class="sue-main-btn fill-btn">Contact Me <i class="ri-user-follow-line"></i></div>
+              </a>
+              <a href="https://drive.google.com/file/d/1peeBhHcOnylBJZbfOHFTDn4NddYmUFQS/view?usp=sharing"
+                target="_blank" class="sue-btn-link" download>
+                <div class="sue-main-btn border-btn">Download CV</div>
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="back-to-top">
-            <a class="back-to-top__button" href="#">Back to top</a>
+      </div>
+    </div>
+  </section>
+
+  <!--========== My Resume ==========-->
+  <section class="sue-section nav-menu-section" id="resume">
+    <div class="sue-container sue-sub-container">
+      <div class="sue-wrapper">
+        <div class="section-title">
+          <h3>My Quick Resume</h3>
+          <p>Combination Of Skills & Experience</p>
         </div>
-    </footer>
+        <div class="resume-tabs">
+          <a class="tab-btn active"><i class="ri-graduation-cap-line"></i>Education</a>
+          <!-- <a class="tab-btn"><i class="ri-sparkling-line"></i>Experience</a> -->
+          <a class="tab-btn"><i class="ri-user-settings-line"></i>Skills</a>
+        </div>
+        <div class="section-content">
+          <div class="resume-tab-content education active">
+            <div class="resume-line"></div>
+            <div class="resume-items">
+
+              <div class="item item-left">
+                <div class="info">
+                  <i class="ri-graduation-cap-fill"></i>
+                  <div>
+                    <h5>Professional Certificate in Full-Stack Web Development</h5>
+                    <p>Remote - CareerFoundry</p>
+                    <span>2024 (10 months)</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item item-right">
+                <div class="info">
+                  <i class="ri-graduation-cap-fill"></i>
+                  <div>
+                    <h5>Master's Degree in Information Technology Management</h5>
+                    <p>Czech Republic - Prague<br>University of Economics<br>and Business</p>
+                    <span>2016-2018</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item item-left">
+                <div class="info">
+                  <i class="ri-graduation-cap-fill"></i>
+                  <div>
+                    <h5>Bachelor's Degree in Informatics</h5>
+                    <p>Czech Republic - Prague<br>University of Economics<br>and Business</p>
+                    <span>2013-2016</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- <div class="resume-tab-content experience">
+            <div class="resume-line"></div>
+            <div class="resume-items">
+
+              <div class="item item-left">
+                <div class="info">
+                  <i class="ri-sparkling-fill"></i>
+                  <div>
+                    <h5>Graphic Designer</h5>
+                    <p>Bluebase Designs</p>
+                    <span>2018-2019</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item item-right">
+                <div class="info">
+                  <i class="ri-sparkling-fill"></i>
+                  <div>
+                    <h5>Front-End Developer</h5>
+                    <p>Larsen & Toubro</p>
+                    <span>2018-2022</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item item-left">
+                <div class="info">
+                  <i class="ri-sparkling-fill"></i>
+                  <div>
+                    <h5>Front-End Developer</h5>
+                    <p>Envato Market</p>
+                    <span>2022-Present</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div> -->
+
+          <div class="resume-tab-content personal-skills">
+            <div class="skill-container">
+
+              <div class="skill-card">
+                <div class="skill-title">
+                  <i class="ri-macbook-fill"></i>
+                  <span>Front-End</span>
+                </div>
+                <div class="skill-categories">
+                  <div class="skill">
+                    <i class="ri-checkbox-circle-fill"></i>
+                    <div class="skill-info">
+                      <h5>HTML</h5>
+                      <!-- <span>Intermediate</span> -->
+                    </div>
+                  </div>
+                  <div class="skill">
+                    <i class="ri-checkbox-circle-fill"></i>
+                    <div class="skill-info">
+                      <h5>CSS</h5>
+                      <!-- <span>Intermediate</span> -->
+                    </div>
+                  </div>
+                  <div class="skill">
+                    <i class="ri-checkbox-circle-fill"></i>
+                    <div class="skill-info">
+                      <h5>JavaScript</h5>
+                      <!-- <span>Intermediate</span> -->
+                    </div>
+                  </div>
+                  <div class="skill">
+                    <i class="ri-checkbox-circle-fill"></i>
+                    <div class="skill-info">
+                      <h5>React</h5>
+                      <!-- <span>Intermediate</span> -->
+                    </div>
+                  </div>
+                  <div class="skill">
+                    <i class="ri-checkbox-circle-fill"></i>
+                    <div class="skill-info">
+                      <h5>React Native</h5>
+                      <!-- <span>Familiar</span> -->
+                    </div>
+                  </div>
+                  <div class="skill">
+                    <i class="ri-checkbox-circle-fill"></i>
+                    <div class="skill-info">
+                      <h5>Angular</h5>
+                      <!-- <span>Familiar</span> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skill-card">
+                <div class="skill-title">
+                  <i class="ri-server-fill"></i>
+                  <span>Back-End</span>
+                </div>
+                <div class="skill-categories">
+                  <div class="skill">
+                    <i class="ri-checkbox-circle-fill"></i>
+                    <div class="skill-info">
+                      <h5>Node JS</h5>
+                      <!-- <span>Intermediate</span> -->
+                    </div>
+                  </div>
+                  <div class="skill">
+                    <i class="ri-checkbox-circle-fill"></i>
+                    <div class="skill-info">
+                      <h5>Express</h5>
+                      <!-- <span>Basic</span> -->
+                    </div>
+                  </div>
+                  <div class="skill">
+                    <i class="ri-checkbox-circle-fill"></i>
+                    <div class="skill-info">
+                      <h5>Python</h5>
+                      <!-- <span>Intermediate</span> -->
+                    </div>
+                  </div>
+                  <div class="skill">
+                    <i class="ri-checkbox-circle-fill"></i>
+                    <div class="skill-info">
+                      <h5>MongoDB</h5>
+                      <!-- <span>Basic</span> -->
+                    </div>
+                  </div>
+                  <div class="skill">
+                    <i class="ri-checkbox-circle-fill"></i>
+                    <div class="skill-info">
+                      <h5>Firebase</h5>
+                      <!-- <span>Basic</span> -->
+                    </div>
+                  </div>
+                  <div class="skill">
+                    <i class="ri-checkbox-circle-fill"></i>
+                    <div class="skill-info">
+                      <h5>Google Apps Script</h5>
+                      <!-- <span>Basic</span> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--========== Services ==========-->
+  <!-- <section class="sue-section nav-menu-section" id="service">
+    <div class="sue-container sue-sub-container">
+      <div class="sue-wrapper">
+        <div class="section-title">
+          <h3>Services</h3>
+          <p>What I Provide</p>
+        </div>
+        <div class="section-content">
+          <div class="service-container">
+
+            <div class="card-with-modal">
+              <div class="service-card">
+                <div class="service-info">
+                  <i class="ri-pencil-ruler-2-fill service-icon"></i>
+                  <h4>Web Design</h4>
+                  <a class="service-see-more">See more <i class="ri-arrow-right-up-fill"></i></a>
+                </div>
+              </div>
+
+              <div class="service-modal-backdrop">
+                <div class="service-modal">
+                  <a class="modal-close-btn"><i class="ri-close-line"></i></a>
+                  <div class="modal-content">
+                    <div class="modal-title">
+                      <h3>Web Design</h3>
+                      <p>With 07 years experience as a professional web designer, I have acquired the skills and
+                        knowledge necessary to make your project a success!</p>
+                    </div>
+                    <h4>What I Provide</h4>
+                    <ul class="my-services">
+                      <li><i class="ri-checkbox-circle-fill"></i>
+                        <p>Design & build a custom websites.</p>
+                      </li>
+                      <li><i class="ri-checkbox-circle-fill"></i>
+                        <p>Responsive Website Design.</p>
+                      </li>
+                      <li><i class="ri-checkbox-circle-fill"></i>
+                        <p>Search Engine Optimization (SEO).</p>
+                      </li>
+                      <li><i class="ri-checkbox-circle-fill"></i>
+                        <p>Website Hosting.</p>
+                      </li>
+                      <li><i class="ri-checkbox-circle-fill"></i>
+                        <p>Website Maintenance and Support.</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-with-modal">
+              <div class="service-card">
+                <div class="service-info">
+                  <i class="ri-image-edit-line service-icon"></i>
+                  <h4>Graphic Design</h4>
+                  <a class="service-see-more">See more <i class="ri-arrow-right-up-fill"></i></a>
+                </div>
+              </div>
+
+              <div class="service-modal-backdrop">
+                <div class="service-modal">
+                  <a class="modal-close-btn"><i class="ri-close-line"></i></a>
+                  <div class="modal-content">
+                    <div class="modal-title">
+                      <h3>Graphic Design</h3>
+                      <p>With 07 years experience as a professional web designer, I have acquired the skills and
+                        knowledge necessary to make your project a success!</p>
+                    </div>
+                    <h4>What I Provide</h4>
+                    <ul class="my-services">
+                      <li><i class="ri-checkbox-circle-fill"></i>
+                        <p>Logos and branding.</p>
+                      </li>
+                      <li><i class="ri-checkbox-circle-fill"></i>
+                        <p>Website/blog design.</p>
+                      </li>
+                      <li><i class="ri-checkbox-circle-fill"></i>
+                        <p>Photoshop design.</p>
+                      </li>
+                      <li><i class="ri-checkbox-circle-fill"></i>
+                        <p>Presentation Design.</p>
+                      </li>
+                      <li><i class="ri-checkbox-circle-fill"></i>
+                        <p>Print design.</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-with-modal">
+              <div class="service-card">
+                <div class="service-info">
+                  <i class="ri-align-item-left-fill service-icon"></i>
+                  <h4>UX/UI Design</h4>
+                  <a class="service-see-more">See more <i class="ri-arrow-right-up-fill"></i></a>
+                </div>
+              </div>
+
+              <div class="service-modal-backdrop">
+                <div class="service-modal">
+                  <a class="modal-close-btn"><i class="ri-close-line"></i></a>
+                  <div class="modal-content">
+                    <div class="modal-title">
+                      <h3>UX/UI Design</h3>
+                      <p>With 07 years experience as a professional web designer, I have acquired the skills and
+                        knowledge necessary to make your project a success!</p>
+                    </div>
+                    <h4>What I Provide</h4>
+                    <ul class="my-services">
+                      <li><i class="ri-checkbox-circle-fill"></i>
+                        <p>Conduct extensive user research.</p>
+                      </li>
+                      <li><i class="ri-checkbox-circle-fill"></i>
+                        <p>Create user personas.</p>
+                      </li>
+                      <li><i class="ri-checkbox-circle-fill"></i>
+                        <p>Design wireframes.</p>
+                      </li>
+                      <li><i class="ri-checkbox-circle-fill"></i>
+                        <p>Build prototype.</p>
+                      </li>
+                      <li><i class="ri-checkbox-circle-fill"></i>
+                        <p>User testing.</p>
+                      </li>
+                      <li><i class="ri-checkbox-circle-fill"></i>
+                        <p>Lorem ipsum dolor consectetur.</p>
+                      </li>
+                      <li><i class="ri-checkbox-circle-fill"></i>
+                        <p>Lorem ipsum dolor consectetur.</p>
+                      </li>
+                      <li><i class="ri-checkbox-circle-fill"></i>
+                        <p>Lorem ipsum dolor consectetur.</p>
+                      </li>
+                      <li><i class="ri-checkbox-circle-fill"></i>
+                        <p>Lorem ipsum dolor consectetur.</p>
+                      </li>
+                      <li><i class="ri-checkbox-circle-fill"></i>
+                        <p>Lorem ipsum dolor consectetur.</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!--========== Portfolio ==========-->
+  <section class="sue-section nav-menu-section" id="portfolio">
+    <div class="sue-container sue-sub-container">
+      <div class="sue-wrapper">
+        <div class="section-title">
+          <h3>Portfolio</h3>
+          <p>My Creative Works</p>
+        </div>
+        <div class="portfolio-tabs">
+          <a class="tab-btn active" data-filter="all">All</a>
+          <a class="tab-btn" data-filter="react">React</a>
+          <a class="tab-btn" data-filter="angular">Angular</a>
+          <a class="tab-btn" data-filter="react-native">React Native</a>
+          <a class="tab-btn" data-filter="nodejs">Node JS</a>
+          <a class="tab-btn" data-filter="javascript">JavaScript</a>
+          <a class="tab-btn" data-filter="typescript">TypeScript</a>
+        </div>
+        <div class="section-content">
+          <div class="portfolio-container">
+
+            <div class="card-with-modal react javascript">
+              <div class="portfolio-card">
+                <div class="card-img">
+                  <img src="assets/images/portfolio images/movie-app-react-main.png" alt="">
+                </div>
+                <div class="card-info">
+                  <span>React · JavaScript</span>
+                  <h4>MyFlix</h4>
+                  <i class="ri-arrow-right-up-line card-btn"></i>
+                </div>
+              </div>
+
+              <div class="portfolio-modal-backdrop">
+                <div class="portfolio-modal" id="prj-myflix">
+                  <a class="modal-close-btn"><i class="ri-close-line"></i></a>
+                  <div class="modal-content">
+                    <div class="modal-img">
+                      <img src="assets/images/portfolio images/movie-app-react-main.png" alt="">
+                    </div>
+                    <h4 class="modal-title">MyFlix</h4>
+                    <p class="description"><strong>Role: </strong> Design & Development</p>
+                    <p class="description"><strong>Tech: </strong> React · JavaScript · React Router · React Bootstrap ·
+                      Prop-Types · Parcel · Netlify</p>
+                    <p class="description"><strong>Description: </strong>MyFlix Client is a sleek, single-page web app
+                      (SPA) for movie enthusiasts, built with React as part of a MERN stack. It connects to the
+                      custom-built myFlix
+                      API to provide users with a seamless experience—browsing movies, viewing details, managing their
+                      profile,
+                      and curating a list of favorites. Users can sign up, log in, update their info, and search for
+                      films with ease. The app is designed with React Router, Bootstrap, and Parcel, ensuring a smooth
+                      UI and performance. Deployed on Netlify, it showcases modern client-side development practices.
+                    </p>
+                    <div class="project-buttons">
+                      <a href="https://github.com/vdevhub/myFlix-client" target="_blank" class="sue-btn-link">
+                        <div class="sue-main-btn fill-btn">Source <i class="ri-arrow-right-up-line"></i></div>
+                      </a>
+                      <a href="https://myflix-vdevhub.netlify.app/" target="_blank" class="sue-btn-link">
+                        <div class="sue-main-btn fill-btn">Live <i class="ri-play-line"></i></div>
+                      </a>
+                      <p><strong>Demo Account: </strong>Username - testuser01, Password - testpassword01</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-with-modal angular typescript">
+              <div class="portfolio-card">
+                <div class="card-img">
+                  <img src="assets/images/portfolio images/movie-app-angular-main.png" alt="">
+                </div>
+                <div class="card-info">
+                  <span>Angular · TypeScript</span>
+                  <h4>SeaFlix</h4>
+                  <i class="ri-arrow-right-up-line card-btn"></i>
+                </div>
+              </div>
+
+              <div class="portfolio-modal-backdrop">
+                <div class="portfolio-modal" id="prj-seaflix">
+                  <a class="modal-close-btn"><i class="ri-close-line"></i></a>
+                  <div class="modal-content">
+                    <div class="modal-img">
+                      <img src="assets/images/portfolio images/movie-app-angular-main.png" alt="">
+                    </div>
+                    <h4 class="modal-title">SeaFlix</h4>
+                    <p class="description"><strong>Role: </strong> Design & Development</p>
+                    <p class="description"><strong>Tech: </strong> Angular · TypeScript · AngularCLI · Angular Material
+                      ·
+                      GitHub Pages</p>
+                    <p class="description"><strong>Description: </strong>SeaFlix is a dynamic, Angular-based web app for
+                      movie lovers, built as part of a MEAN stack. It connects to the myFlix API to offer users a
+                      seamless experience—browsing movies, viewing details on genres and directors, managing their
+                      profile, and curating a favorites list. With Angular Material and custom SCSS, the UI is sleek and
+                      responsive. Users can sign up, log in, search for films, update their info, and delete their
+                      account. Built with TypeScript, it leverages directives, generics, static typing, and data binding
+                      to ensure a scalable and maintainable architecture.
+                    </p>
+                    <div class="project-buttons">
+                      <a href="https://github.com/vdevhub/seaFlix-Angular-Client" target="_blank" class="sue-btn-link">
+                        <div class="sue-main-btn fill-btn">Source <i class="ri-arrow-right-up-line"></i></div>
+                      </a>
+                      <a href="https://vdevhub.github.io/seaFlix-Angular-Client/welcome" target="_blank"
+                        class="sue-btn-link">
+                        <div class="sue-main-btn fill-btn">Live <i class="ri-play-line"></i></div>
+                      </a>
+                      <p><strong>Demo Account: </strong>Username - testuser01, Password - testpassword01</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-with-modal nodejs express mongodb">
+              <div class="portfolio-card">
+                <div class="card-img">
+                  <img src="assets/images/portfolio images/movie-api-getMovies.png" alt="">
+                </div>
+                <div class="card-info">
+                  <span>Node.js · Express · MongoDB</span>
+                  <h4>MyFlix API</h4>
+                  <i class="ri-arrow-right-up-line card-btn"></i>
+                </div>
+              </div>
+
+              <div class="portfolio-modal-backdrop">
+                <div class="portfolio-modal" id="prj-myflix-api">
+                  <a class="modal-close-btn"><i class="ri-close-line"></i></a>
+                  <div class="modal-content">
+                    <div class="modal-img">
+                      <img src="assets/images/portfolio images/movie-api-getMovies.png" alt="">
+                    </div>
+                    <h4 class="modal-title">MyFlix API</h4>
+                    <p class="description"><strong>Role: </strong> Design & Development</p>
+                    <p class="description"><strong>Tech: </strong> Node.js · Express · MongoDB · Postman ·
+                      JSON · Morgan · UUID · Body Parser · Mongoose · Passport · JWT · Bcrypt · CORS · Express Validator
+                      · Heroku · MongoDB Atlas</p>
+                    <p class="description"><strong>Description: </strong>myFlix API is a RESTful server-side application
+                      that provides movie enthusiasts with access to detailed information on films, genres, and
+                      directors. Built with Node.js, Express, and MongoDB, it allows users to sign up, update their
+                      profile, and manage a list of favorite movies. The API ensures security with JWT authentication,
+                      password hashing, and input validation, while CORS support enables seamless client integration.
+                      Fully documented with JSDoc, it follows best practices in routing, authentication, and data
+                      management. Deployed on Heroku and MongoDB Atlas, myFlix API is a robust foundation for
+                      movie-related applications.
+                    </p>
+                    <div class="project-buttons">
+                      <a href="https://github.com/vdevhub/movie-api" target="_blank" class="sue-btn-link">
+                        <div class="sue-main-btn fill-btn">Source <i class="ri-arrow-right-up-line"></i></div>
+                      </a>
+                      <a href="https://movies-myflix-api-84dbf8740f2d.herokuapp.com/documentation.html" target="_blank"
+                        class="sue-btn-link">
+                        <div class="sue-main-btn fill-btn">Docs <i class="ri-play-line"></i></div>
+                      </a>
+                    </div>
+                    <div class="modal-img">
+                      <img src="assets/images/portfolio images/movie-api-js-docs.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-with-modal react pwa">
+              <div class="portfolio-card">
+                <div class="card-img">
+                  <img src="assets/images/portfolio images/meet-app-main.png" alt="">
+                </div>
+                <div class="card-info">
+                  <span>React · PWA</span>
+                  <h4>Meet</h4>
+                  <i class="ri-arrow-right-up-line card-btn"></i>
+                </div>
+              </div>
+
+              <div class="portfolio-modal-backdrop">
+                <div class="portfolio-modal" id="prj-meet">
+                  <a class="modal-close-btn"><i class="ri-close-line"></i></a>
+                  <div class="modal-content">
+                    <div class="modal-img">
+                      <img src="assets/images/portfolio images/meet-app-main.png" alt="">
+                    </div>
+                    <h4 class="modal-title">Meet</h4>
+                    <p class="description"><strong>Role: </strong> Design & Development</p>
+                    <p class="description"><strong>Tech: </strong> React · PWA · Serverless · AWS Lambda ·
+                      Jest · React Testing Library · Google Calendar API · Google OAuth2 · Lighthouse · Recharts ·
+                      Atatus · GitHub Pages</p>
+                    <p class="description"><strong>Description: </strong>Meet is a serverless, progressive web app (PWA)
+                      that helps users discover upcoming events in their selected city. Built with React and developed
+                      using test-driven development (TDD), it integrates with the Google Calendar API for real-time
+                      event data. Users can filter events by city, specify event count, view event details, and use the
+                      app offline. Featuring interactive charts and home screen shortcuts, Meet delivers a smooth and
+                      accessible experience. Powered by AWS Lambda, Jest, and Recharts, it follows best practices in
+                      TDD, functional programming, and performance optimization.
+                    </p>
+                    <div class="project-buttons">
+                      <a href="https://github.com/vdevhub/meet" target="_blank" class="sue-btn-link">
+                        <div class="sue-main-btn fill-btn">Source <i class="ri-arrow-right-up-line"></i></div>
+                      </a>
+                      <a href="https://vdevhub.github.io/meet/" target="_blank" class="sue-btn-link">
+                        <div class="sue-main-btn fill-btn">Live <i class="ri-play-line"></i></div>
+                      </a>
+                      <p><strong>Note: </strong>To see the whole app's content, logging in is required through your
+                        Google account.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-with-modal react-native">
+              <div class="portfolio-card">
+                <div class="card-img">
+                  <img src="assets/images/portfolio images/chat-chime-main.png" alt="">
+                </div>
+                <div class="card-info">
+                  <span>React Native · Firebase</span>
+                  <h4>Chat Chime</h4>
+                  <i class="ri-arrow-right-up-line card-btn"></i>
+                </div>
+              </div>
+
+              <div class="portfolio-modal-backdrop">
+                <div class="portfolio-modal" id="prj-chat-chime">
+                  <a class="modal-close-btn"><i class="ri-close-line"></i></a>
+                  <div class="modal-content">
+                    <div class="modal-img">
+                      <img src="assets/images/portfolio images/chat-chime-main.png" alt="">
+                    </div>
+                    <h4 class="modal-title">Chat Chime</h4>
+                    <p class="description"><strong>Role: </strong> Design & Development</p>
+                    <p class="description"><strong>Tech: </strong> React Native · Firebase · GiftedChat · React
+                      Navigator · React Native Maps ·Expo · Expo Go · Android Emulator</p>
+                    <p class="description"><strong>Description: </strong>Chat Chime is a React Native chat app designed
+                      for seamless communication on mobile devices. It offers a real-time chat interface powered by
+                      Gifted Chat, allowing users to send messages, share images, and share their location. Users can
+                      customize their chat experience by choosing a background color before joining. Messages and media
+                      are securely stored in Google Firebase (Firestore & Storage), ensuring both online and offline
+                      accessibility. Built with Expo, React Navigator, and React Native Maps, Chat Chime leverages
+                      native device features for an intuitive and engaging user experience.
+                    </p>
+                    <div class="project-buttons">
+                      <a href="https://github.com/vdevhub/chat-chime" target="_blank" class="sue-btn-link">
+                        <div class="sue-main-btn fill-btn">Source <i class="ri-arrow-right-up-line"></i></div>
+                      </a>
+                      <a href="https://drive.google.com/file/d/1QFtwCGGDgcpk9yN1h1bOyRx_oaePBiZg/view?usp=drive_link"
+                        target="_blank" class="sue-btn-link">
+                        <div class="sue-main-btn fill-btn">Demo <i class="ri-play-line"></i></div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-with-modal html css javascript">
+              <div class="portfolio-card">
+                <div class="card-img">
+                  <img src="assets/images/portfolio images/pokedex-main.png" alt="">
+                </div>
+                <div class="card-info">
+                  <span>HTML · CSS · JavaScript</span>
+                  <h4>Pokédex</h4>
+                  <i class="ri-arrow-right-up-line card-btn"></i>
+                </div>
+              </div>
+
+              <div class="portfolio-modal-backdrop">
+                <div class="portfolio-modal" id="prj-pokedex">
+                  <a class="modal-close-btn"><i class="ri-close-line"></i></a>
+                  <div class="modal-content">
+                    <div class="modal-img">
+                      <img src="assets/images/portfolio images/pokedex-main.png" alt="">
+                    </div>
+                    <h4 class="modal-title">Pokédex</h4>
+                    <p class="description"><strong>Role: </strong> Design & Development</p>
+                    <p class="description"><strong>Tech: </strong> HTML · CSS · JavaScript · Bootstrap · Prettier ·
+                      ESLint · GitHub Pages</p>
+                    <p class="description"><strong>Description: </strong>The Pokédex App is a simple and interactive
+                      Pokémon collection that fetches data from an external API. Users can browse a list of Pokémon, and
+                      clicking on a Pokémon card opens a modal with detailed information. Built with HTML, CSS, and
+                      JavaScript, the app uses Bootstrap for styling and fetch API for asynchronous data retrieval.
+                      Designed with clean UI patterns and efficient DOM interactions, it offers a smooth and engaging
+                      experience for Pokémon fans.
+                    </p>
+                    <div class="project-buttons">
+                      <a href="https://github.com/vdevhub/pokedex-app" target="_blank" class="sue-btn-link">
+                        <div class="sue-main-btn fill-btn">Source <i class="ri-arrow-right-up-line"></i></div>
+                      </a>
+                      <a href="https://vdevhub.github.io/pokedex-app/" target="_blank" class="sue-btn-link">
+                        <div class="sue-main-btn fill-btn">Live <i class="ri-play-line"></i></div>
+                      </a>
+                    </div>
+                    <div class="modal-img">
+                      <img src="assets/images/portfolio images/pokedex-modal.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="testimonials">
+        <div class="section-title">
+          <h3>Awesome Clients</h3>
+          <p>Words From My Clients</p>
+        </div>
+        <div class="section-content">
+          <div class="swiper sue-client-swiper">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                <div class="client-img">
+                  <img src="assets/images/client images/client-img-01.jpg" alt="">
+                </div>
+                <div class="client-details">
+                  <h3>Aria Collins</h3>
+                  <span>Marketing Manager</span>
+                  <p>Hi, I’m Aria Collins and I am designer & developer who dream making the world better place by
+                    products. I am also very active for international clients.</p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="client-img">
+                  <img src="assets/images/client images/client-img-02.jpg" alt="">
+                </div>
+                <div class="client-details">
+                  <h3>Cillian Metcalfe</h3>
+                  <span>Graphic Designer</span>
+                  <p>This is outstanding work. Everything I needed to do has been done by the makers. I really like this
+                    template and more importantly my clients are blown away by it.</p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="client-img">
+                  <img src="assets/images/client images/client-img-03.jpg" alt="">
+                </div>
+                <div class="client-details">
+                  <h3>Kianna Baird</h3>
+                  <span>App Developer</span>
+                  <p>These people really know what they are doing! Great customer support availability and supperb
+                    kindness. I am very happy that I've purchased this liscense!!!</p>
+                </div>
+              </div>
+
+            </div>
+            <div class="swiper-button-next">
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div class="swiper-button-prev">
+              <i class="ri-arrow-left-s-line"></i>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div> -->
+
+    </div>
+  </section>
+
+  <!--========== Contact Me ==========-->
+  <section class="sue-section nav-menu-section" id="contact">
+    <div class="sue-container sue-sub-container">
+      <div class="sue-wrapper">
+        <div class="section-title">
+          <h3>Contact Me</h3>
+          <p>Get In Touch</p>
+        </div>
+        <div class="section-content">
+          <div class="contact-container">
+
+            <div class="contact-info">
+              <h3>Social Info</h3>
+              <ul class="contact-social-links">
+                <li><a href="https://www.linkedin.com/in/veronikatr/"><i class="ri-linkedin-fill"></i></a></li>
+                <li><a href="https://github.com/vdevhub"><i class="ri-github-fill"></i></a></li>
+                <li><a href="https://medium.com/@vdevhub"><i class="ri-medium-fill"></i></a></li>
+              </ul>
+
+              <!-- <h3>Contact Info</h3>
+              <ul class="contact-details">
+
+                <li class="contact-item">
+                  <div class="contact-icon">
+                    <i class="ri-mail-send-fill"></i>
+                  </div>
+                  <div class="contact-method">
+                    <span>E-mail</span>
+                    <h4>info@sue.ayers.com</h4>
+                    <a href="mailto:someone@example.com" target="_blank"><span>Send <i
+                          class="ri-arrow-right-up-line"></i></span></a>
+                  </div>
+                </li>
+
+                <li class="contact-item">
+                  <div class="contact-icon">
+                    <i class="ri-whatsapp-line"></i>
+                  </div>
+                  <div class="contact-method">
+                    <span>Whatsapp</span>
+                    <h4>+94 111-222-333</h4>
+                    <a href="https://wa.me/+94111222333?text=Hello%20there!%20How%20can%20I%20help%20you?"
+                      target="_blank"><span>Send <i class="ri-arrow-right-up-line"></i></span></a>
+                  </div>
+                </li>
+
+                <li class="contact-item">
+                  <div class="contact-icon">
+                    <i class="ri-messenger-fill"></i>
+                  </div>
+                  <div class="contact-method">
+                    <span>Messenger</span>
+                    <h4>Sue.Ayers-fb123</h4>
+                    <a href="https://m.me/codingsnow?text=Hello%20and%20Welcome!" target="_blank"><span>Send <i
+                          class="ri-arrow-right-up-line"></i></span></a>
+                  </div>
+                </li>
+
+              </ul> -->
+
+            </div>
+
+            <div class="contact-form-body">
+              <h2>Let's <span>talk.</span></h2>
+              <p>Interested in working together, having a chat, or hiring me? Feel free to use the form below or contact
+                me via LinkedIn. I look forward to your message.</p>
+              <form action="" method="" id="sue-contact-form">
+                <div class="input-group">
+                  <input type="text" name="full-name" placeholder="Name *" required>
+                </div>
+                <div class="input-group">
+                  <input type="text" name="email" placeholder="Email *" required>
+                </div>
+                <div class="input-group">
+                  <input type="text" name="subject" placeholder="Your Subject *" required>
+                </div>
+                <div class="input-group">
+                  <textarea name="message" placeholder="Your Message *" required></textarea>
+                </div>
+                <div class="input-group send-message">
+                  <button class="sue-main-btn fill-btn submit-btn" name="submit" type="submit">Send Message</button>
+                  <div class="contact-form-alert"></div>
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--========== Footer ==========-->
+  <footer class="sue-footer">
+    <div class="sue-container">
+      <div class="inner">
+        <div class="sue-logo">
+          <a href="#home"><span>Veronika</span></a>
+        </div>
+        <ul class="footer-menu">
+          <li class="menu-item"><a href="#about">About</a></li>
+          <li class="menu-item"><a href="#resume">Resume</a></li>
+          <!-- <li class="menu-item"><a href="#service">Service</a></li> -->
+          <li class="menu-item"><a href="#portfolio">Portfolio</a></li>
+        </ul>
+        <p class="copy-right">© All rights reserved by Coding Snow</p>
+      </div>
+    </div>
+  </footer>
+
+  <!--========== Swiper JS ==========-->
+  <script src="assets/js/swiper-bundle.min.js"></script>
+
+  <!--========== EmailJS ==========-->
+  <script src="assets/js/email.min.js"></script>
+
+  <!--========== Main javascript ==========-->
+  <script src="assets/js/main.js"></script>
+
 </body>
-<script src="js/script.js"></script>
 
 </html>
