@@ -124,7 +124,7 @@ function openModal(modalId) {
       }, 300);
 
       // Update URL with the modal ID
-      window.location.hash = modalId;
+      history.pushState(null, null, `#${modalId}`);
    }
 }
 
@@ -163,10 +163,10 @@ portfolioCardsWithModals.forEach((portfolioCardWithModal) => {
 });
 
 // Check for a hash in the URL and open the corresponding modal on page load
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {  // Using 'load' instead of 'DOMContentLoaded' to ensure everything is ready
    if (window.location.hash) {
-      const modalId = window.location.hash.substring(1);
-      openModal(modalId);
+      const modalId = window.location.hash.substring(1);  // Extract the modal ID from the hash
+      openModal(modalId);  // Open the modal based on the hash
    }
 });
 
