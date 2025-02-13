@@ -1088,6 +1088,11 @@ body {
    border-radius: 10px;
 }
 
+.full-width {
+   grid-column: 1 / -1;
+   /* Stretch across all columns */
+}
+
 .skill-title {
    display: flex;
    align-items: center;
