@@ -983,7 +983,7 @@ body {
 .education .resume-line {
    background: var(--primary-color);
    width: 2px;
-   height: 380px;
+   height: 250px;
 }
 
 .resume-items {
@@ -1000,6 +1000,10 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
+}
+
+.resume-items .item .info:last-child {
+   margin-bottom: 40px;
 }
 
 .resume-items .item:before {
@@ -1020,7 +1024,7 @@ body {
 }
 
 .resume-items .item-left .info {
-   right: 35px;
+   right: 75px;
 }
 
 .resume-items .item-right .info {
@@ -2045,8 +2049,12 @@ body {
       column-gap: 15px;
    }
 
+   .resume-items .item .info:last-child {
+      margin-bottom: 40px;
+   }
+
    .resume-items .item-left .info {
-      right: 25px;
+      right: 45px;
    }
 
    .resume-items .item-right .info {
@@ -2255,8 +2263,12 @@ body {
       width: 140px;
    }
 
+   .resume-items .item .info:last-child {
+      margin-bottom: 60px;
+   }
+
    .resume-items .item-left .info {
-      right: 20px;
+      right: 40px;
    }
 
    .resume-items .item-right .info {
