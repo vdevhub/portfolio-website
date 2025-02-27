@@ -1092,6 +1092,11 @@ body {
    border-radius: 10px;
 }
 
+.cert {
+   flex-direction: row;
+   background: var(--white-color);
+}
+
 .full-width {
    grid-column: 1 / -1;
    /* Stretch across all columns */
