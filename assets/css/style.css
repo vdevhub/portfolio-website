@@ -1094,7 +1094,18 @@ body {
 
 .cert {
    flex-direction: row;
+   flex-wrap: wrap;
    background: var(--white-color);
+   justify-content: center;
+}
+
+.cert-blocks {
+   flex-direction: column;
+   gap: 25px;
+}
+
+.cert>img {
+   width: 90%;
 }
 
 .full-width {
