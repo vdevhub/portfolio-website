@@ -1956,6 +1956,7 @@ body {
 
    .avatar-info .text-content {
       align-items: center;
+      text-align: center;
    }
 
    .service-container {
